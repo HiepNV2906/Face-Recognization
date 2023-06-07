@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %}" type="text/css">
+    <title>Result</title>
+    <style>
+        img {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center" style="margin: 50px 0 30px;">
+            <div class="col-sm-4 text-center">
+                <h1>Ảnh đầu vào</h1>
+                {% block input %}{% endblock %}
+            </div>
+        </div>
+        <div class="row justify-content-center" style="margin: 80px 0 30px;">
+            <h1 class="text-center">Kết quả tìm kiếm</h1>
+            {% block output %}{% endblock %}
+        </div>
+        <div class="row justify-content-center" style="margin: 50px 0 30px;">
+            <div class="col-sm-4 text-center">
+                <a href="/home" class="btn btn-success">Làm lại</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

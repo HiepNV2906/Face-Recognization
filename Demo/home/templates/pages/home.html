@@ -1,0 +1,15 @@
+{% extends "pages/result.html" %}
+
+{% block input %}
+{% load static %}
+<img src="{% static 'img/upload/' %}{{input}}" alt="none">
+{% endblock %}
+
+{% block output %}
+{% for img in output %}
+{% load static %}
+<div class="col-sm-2 text-center">
+    <img src="{% static 'img/Children/' %}{{img}}" alt="none">
+</div>
+{% endfor %}
+{% endblock %}
